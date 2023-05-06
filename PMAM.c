@@ -98,14 +98,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             result2=strstr(endStr,"PM");
             if(result2==NULL)result2=strstr(endStr,"pm");
             double d1=(double)obter_numero_antigo(startStr);
-            if (d1==0)d1=12;
+            if (d1==12)d1=0;
             if(result1!=NULL)d1=d1+12;
             d1=d1*100.00;
             double d2=0;
             if(fildscount>1) d2=(double)atoi(fields[1]);
             d2=d2*1.666666;
             double d3=(double)obter_numero_antigo(endStr);
-            if (d1==0)d1=12;
+            if (d3==12)d3=0;
             if(result2!=NULL)d3=d3+12;
             d3=d3*100.00;
             double d4=0;
